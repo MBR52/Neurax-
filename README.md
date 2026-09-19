@@ -119,9 +119,6 @@ High Waiting Time
 Throughput Impact
        ↓
 Potential Bottleneck
-```
-
-Instead of assuming which station is the bottleneck, our system identifies it from the data.
 
 ### 🔹 5. Root-Cause Investigation
 
