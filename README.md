@@ -217,6 +217,19 @@ flowchart TD
     G --> H[Defect and Bottleneck Identification]
     H --> I[Root Cause Investigation]
     I --> J[Impact Estimation]
+    J --> K[What If Simulation]
+    K --> L[Recommendation Engine]
+    L --> M[Unified Dashboard]
+    M --> N[Human Decision]
+Core Idea
+
+We do not stop at detecting a problem.
+
+We connect the available data to understand:
+
+What is happening → Where it is happening → What may be contributing → How it affects production and cost → What should be investigated next.
+
+All recommendations and improvement scenarios are advisory and simulated. The final decision remains with the manufacturing team.
 
 
                 
