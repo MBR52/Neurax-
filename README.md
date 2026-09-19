@@ -217,8 +217,6 @@ flowchart TD
     G --> H[Defect and Bottleneck Identification]
     H --> I[Root Cause Investigation]
     I --> J[Impact Estimation]
-    J -
-
 
 
                 
