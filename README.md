@@ -165,7 +165,6 @@ The final dashboard brings everything together:
 **Quality → Production → Root Cause → Impact → Recommendations**
 
 ## System Flow
-```mermaid
 flowchart TD
     A[Manufacturing Data] --> B[Data Preparation]
     B --> C[Quality Analysis]
