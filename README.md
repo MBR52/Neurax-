@@ -7,9 +7,9 @@ High-throughput manufacturing environments involve multiple interacting factors 
 
 The challenge becomes more complex when manufacturing lines contain:
 
--Multiple product variants
--Changing inspection conditions
--Recurring defect families
+-Multiple product variants\\
+-Changing inspection conditions\\
+-Recurring defect families\\
 -Batch-to-batch process drift
 -Different station capacities
 -Changing operating condition
