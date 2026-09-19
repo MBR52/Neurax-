@@ -29,33 +29,203 @@ The system is designed specifically as an integrated industrial decision-support
 
 ##Architecture
 
-## 🏗️ System Architecture
+## System Architecture
+
+Our system follows a layered architecture that connects manufacturing data with AI analysis and decision support.
 
 ```mermaid
 flowchart TD
-    A[Organizer Datasets] --> B[Data Preprocessing]
+    A[Manufacturing Data] --> B[Data Preparation]
 
-    B --> C[Inspection Analysis]
+    B --> C[Quality Analysis]
     B --> D[Production Analysis]
-    B --> E[Economic Analysis]
+    B --> E[Process Analysis]
+    B --> F[Economic Analysis]
 
-    C --> F[Defect Detection]
-    C --> G[Defect Pattern Analysis]
+    C --> G[Pattern Analysis]
+    D --> G
+    E --> G
+    F --> G
 
-    D --> H[Bottleneck Detection]
-    D --> I[Cycle Time & Downtime Analysis]
+    G --> H[Root Cause Analysis]
+    H --> I[Impact Estimation]
+    I --> J[What If Simulation]
+    J --> K[Recommendation Engine]
+    K --> L[Unified Dashboard]
+    L --> M[Human Decision]
+```
 
-    E --> J[Cost & Profit Analysis]
+### Architecture Layers
 
-    F --> K[Root Cause Analysis]
-    G --> K
-    H --> K
-    I --> K
+**1. Data Layer**
+Collects inspection, production, process, product, batch, and economic information.
 
-    K --> L[Impact Estimation]
-    L --> M[What-If Simulation]
+**2. Data Preparation Layer**
+Cleans, validates, transforms, and prepares the available data for analysis.
 
-    M --> N[AI Recommendation Engine]
-    N --> O[Unified Dashboard]
+**3. AI and Analytics Layer**
+Analyzes quality, production, process, and economic information to identify patterns and problems.
+
+**4. Decision Intelligence Layer**
+Performs root-cause investigation, impact estimation, and what-if simulation.
+
+**5. Recommendation Layer**
+Converts the analysis into evidence-based recommendations.
+
+**6. Dashboard Layer**
+Presents quality, production, root-cause, economic, and recommendation insights in one place.
+
+---
+
+## Approach
+
+Our solution follows a simple idea:
+
+**Detect → Understand → Connect → Simulate → Recommend**
+
+### 1. Data Collection
+
+We bring together the available manufacturing data:
+
+* Inspection and quality data
+* Production data
+* Process conditions
+* Product and batch information
+* Economic data
+
+### 2. Data Preparation
+
+The collected data is cleaned and prepared by:
+
+* Handling missing values
+* Removing invalid or duplicate records
+* Standardizing data
+* Creating useful features
+* Combining related datasets
+
+### 3. Quality Analysis
+
+The system analyzes inspection data to identify:
+
+* Acceptable products
+* Defective products
+* Defect types and locations, when available
+* Unusual or uncertain cases
+
+The system avoids forcing uncertain cases into an existing category when the available evidence is insufficient.
+
+### 4. Production and Bottleneck Analysis
+
+We analyze:
+
+* Cycle time
+* Throughput
+* Utilization
+* Downtime
+* WIP
+* Changeover time
+* Station capacity
+
+This helps identify production stations that may be restricting the overall flow.
+
+### 5. Root-Cause Analysis
+
+The system connects quality problems with production and process conditions.
+
+It looks for patterns across:
+
+* Stations
+* Batches
+* Product variants
+* Process conditions
+* Operating conditions
+* Time periods
+
+The system identifies **possible contributing factors** rather than treating correlation as confirmed causation.
+
+### 6. Impact Estimation
+
+The system estimates how identified problems can affect:
+
+* Production output
+* Scrap
+* Rework
+* Downtime
+* Operating cost
+* Revenue
+* Profit or margin
+
+The calculation depends on the economic information available in the provided datasets.
+
+### 7. What-If Simulation
+
+Users can test possible improvement scenarios without affecting the real production system.
+
+For example:
+
+```text
+Reduce Defect Rate
+        |
+        v
+Less Scrap and Rework
+        |
+        v
+More Good Output
+        |
+        v
+Potential Cost Impact
+```
+
+Similar scenarios can be explored for cycle time, downtime, and other relevant production factors.
+
+### 8. Recommendation Engine
+
+The system combines the analysis and generates evidence-based recommendations.
+
+Instead of only showing that a problem exists, it explains:
+
+* Where the problem is
+* What factors may be contributing
+* How it affects production
+* What improvement can be investigated
+
+### 9. Unified Dashboard
+
+The final dashboard brings the complete analysis together:
+
+**Quality → Production → Root Cause → Impact → Recommendations**
+
+---
+
+## End-to-End Flow
+
+```mermaid
+flowchart TD
+    A[Manufacturing Data] --> B[Data Preparation]
+
+    B --> C[Quality Analysis]
+    B --> D[Production Analysis]
+    B --> E[Process Analysis]
+    B --> F[Economic Analysis]
+
+    C --> G[Pattern and Relationship Analysis]
+    D --> G
+    E --> G
+    F --> G
+
+    G --> H[Defect and Bottleneck Identification]
+    H --> I[Root Cause Investigation]
+    I --> J[Impact Estimation]
+    J -
+```****
+
+
+
+                
+
+
+
+
+
 
 
