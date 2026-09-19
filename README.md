@@ -59,3 +59,128 @@ flowchart TD
     N --> O[Unified Dashboard]
 
 
+
+## Approach
+
+Our solution follows a simple idea:
+
+**Detect → Understand → Connect → Simulate → Recommend**
+
+### 1. Data Collection
+
+We bring together the available manufacturing data:
+
+- Inspection and quality data
+- Production data
+- Process conditions
+- Product and batch information
+- Economic data
+
+### 2. Data Preparation
+
+The collected data is cleaned and prepared by:
+
+- Handling missing values
+- Removing invalid or duplicate records
+- Standardizing data
+- Creating useful features
+- Combining related datasets
+
+### 3. Quality Analysis
+
+The system analyzes inspection data to identify:
+
+- Acceptable products
+- Defective products
+- Defect types and locations, when available
+- Unusual or uncertain cases
+
+### 4. Production and Bottleneck Analysis
+
+We analyze:
+
+- Cycle time
+- Throughput
+- Utilization
+- Downtime
+- WIP
+- Changeover time
+- Station capacity
+
+This helps identify stations that may be restricting production.
+
+### 5. Root-Cause Analysis
+
+The system connects quality problems with production and process conditions.
+
+It looks for patterns across:
+
+- Stations
+- Batches
+- Product variants
+- Process conditions
+- Operating conditions
+- Time periods
+
+The system identifies possible contributing factors instead of treating correlation as confirmed causation.
+
+### 6. Impact Estimation
+
+The system estimates the effect of identified problems on:
+
+- Production output
+- Scrap
+- Rework
+- Downtime
+- Cost
+- Revenue
+- Profit or margin
+
+### 7. What-If Simulation
+
+Users can test possible improvement scenarios without affecting the real production system.
+
+For example:
+
+Defect Rate ↓  
+→ Scrap/Rework ↓  
+→ Good Output ↑  
+→ Potential Cost Impact ↓
+
+### 8. Recommendation Engine
+
+The system combines the analysis and generates evidence-based recommendations.
+
+Instead of only showing that a problem exists, it explains:
+
+- Where the problem is
+- What factors may be contributing
+- How it affects production
+- What improvement can be investigated
+
+### 9. Unified Dashboard
+
+The final dashboard brings everything together:
+
+**Quality → Production → Root Cause → Impact → Recommendations**
+
+## System Flow
+```mermaid
+flowchart TD
+    A[Manufacturing Data] --> B[Data Preparation]
+    B --> C[Quality Analysis]
+    B --> D[Production Analysis]
+    B --> E[Process Analysis]
+    B --> F[Economic Analysis]
+
+    C --> G[Pattern Analysis]
+    D --> G
+    E --> G
+    F --> G
+
+    G --> H[Root Cause Analysis]
+    H --> I[Impact Estimation]
+    I --> J[What If Simulation]
+    J --> K[Recommendation Engine]
+    K --> L[Unified Dashboard]
+    L --> M[Human Decision]
