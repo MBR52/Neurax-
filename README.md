@@ -41,8 +41,37 @@ Generate evidence-based process recommendations that remain simulated and adviso
 
 The system is designed specifically as an integrated industrial decision-support solution rather than an isolated image classifier or a standalone KPI dashboard.
 
-#Architecture
+##Architecture
 
 
 
 
+
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TD
+    A[Organizer Datasets] --> B[Data Preprocessing]
+
+    B --> C[Inspection Analysis]
+    B --> D[Production Analysis]
+    B --> E[Economic Analysis]
+
+    C --> F[Defect Detection]
+    C --> G[Defect Pattern Analysis]
+
+    D --> H[Bottleneck Detection]
+    D --> I[Cycle Time & Downtime Analysis]
+
+    E --> J[Cost & Profit Analysis]
+
+    F --> K[Root Cause Analysis]
+    G --> K
+    H --> K
+    I --> K
+
+    K --> L[Impact Estimation]
+    L --> M[What-If Simulation]
+
+    M --> N[AI Recommendation Engine]
+    N --> O[Unified Dashboard]
