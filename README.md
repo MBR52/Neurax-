@@ -35,7 +35,6 @@ The system is designed specifically as an integrated industrial decision-support
 
 ## 🏗️ System Architecture
 
-```mermaid
 flowchart TD
     A[Organizer Datasets] --> B[Data Preprocessing]
 
