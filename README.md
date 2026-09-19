@@ -218,7 +218,6 @@ flowchart TD
     H --> I[Root Cause Investigation]
     I --> J[Impact Estimation]
     J -
-```****
 
 
 
