@@ -200,6 +200,7 @@ The final dashboard brings the complete analysis together:
 ## End-to-End Flow
 
 ```mermaid
+
 flowchart TD
     A[Manufacturing Data] --> B[Data Preparation]
 
