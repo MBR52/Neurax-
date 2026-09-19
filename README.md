@@ -34,25 +34,32 @@ The system is designed specifically as an integrated industrial decision-support
 Our system follows a layered architecture that connects manufacturing data with AI analysis and decision support.
 
 ```mermaid
+
 flowchart TD
-    A[Manufacturing Data] --> B[Data Preparation]
+    A[Organizer Datasets] --> B[Data Preprocessing]
 
-    B --> C[Quality Analysis]
+    B --> C[Inspection Analysis]
     B --> D[Production Analysis]
-    B --> E[Process Analysis]
-    B --> F[Economic Analysis]
+    B --> E[Economic Analysis]
 
-    C --> G[Pattern Analysis]
-    D --> G
-    E --> G
-    F --> G
+    C --> F[Defect Detection]
+    C --> G[Defect Pattern Analysis]
 
-    G --> H[Root Cause Analysis]
-    H --> I[Impact Estimation]
-    I --> J[What If Simulation]
-    J --> K[Recommendation Engine]
-    K --> L[Unified Dashboard]
-    L --> M[Human Decision]
+    D --> H[Bottleneck Detection]
+    D --> I[Cycle Time & Downtime Analysis]
+
+    E --> J[Cost & Profit Analysis]
+
+    F --> K[Root Cause Analysis]
+    G --> K
+    H --> K
+    I --> K
+
+    K --> L[Impact Estimation]
+    L --> M[What-If Simulation]
+
+    M --> N[AI Recommendation Engine]
+    N --> O[Unified Dashboard]
 ```
 
 ### Architecture Layers
