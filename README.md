@@ -1,9 +1,6 @@
 # Neurax-
 
 
-## Problem 
-
-High-throughput manufacturing environments involve multiple interacting factors such as product quality, production capacity, process conditions and economics. Defects may be difficult to detect, while production bottlenecks can arise from cycle-time imbalance, work-in-process buildup, downtime, changeovers, low utilization, scrap and rework.
 
 ## Problem
 High-throughput manufacturing environments involve multiple interacting factors such as product quality, production capacity, process conditions, and economics. Defects may be difficult to detect, while production bottlenecks can arise from cycle-time imbalance, work-in-process buildup, downtime, changeovers, low utilization, scrap, and rework.
